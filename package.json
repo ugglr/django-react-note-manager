@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./notemanager/frontend/src/index.js --output ./notemanager/frontend/static/frontend/main.js",
+    "dev": "webpack --mode development --watch ./notemanager/frontend/src/index.js --output ./notemanager/frontend/static/frontend/main.js",
     "build": "webpack --mode production ./notemanager/frontend/src/index.js --output ./notemanager/frontend/static/frontend/main.js"
   },
   "repository": {
@@ -30,6 +30,10 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.2",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   }
 }
