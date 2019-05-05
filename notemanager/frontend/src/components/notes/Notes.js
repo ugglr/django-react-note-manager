@@ -5,7 +5,9 @@ import { getNotes, deleteNote } from "../../actions/notes";
 
 export class Notes extends Component {
   static propTypes = {
-    notes: PropTypes.array.isRequired
+    notes: PropTypes.array.isRequired,
+    getNotes: PropTypes.func.isRequired,
+    deleteNote: PropTypes.func.isRequired
   };
 
   componentDidMount() {
