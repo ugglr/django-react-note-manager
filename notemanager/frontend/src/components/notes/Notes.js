@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getNotes } from "../../actions/notes";
+import { getNotes, deleteNote } from "../../actions/notes";
 
 export class Notes extends Component {
   static propTypes = {
@@ -32,7 +32,12 @@ export class Notes extends Component {
                 <td>{note.title}</td>
                 <td>{note.body}</td>
                 <td>
-                  <button className="btn btn-danger btn-sm">Delete</button>
+                  <button
+                    onClick={this.props.deleteNote.bind(this, note.id)}
+                    className="btn btn-danger btn-sm"
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
@@ -49,5 +54,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getNotes }
+  { getNotes, deleteNote }
 )(Notes);

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { GET_NOTES } from "./types";
+import { GET_NOTES, DELETE_NOTEs } from "./types";
 
 //GET NOTES
 export const getNotes = () => dispatch => {
@@ -10,6 +10,19 @@ export const getNotes = () => dispatch => {
       dispatch({
         type: GET_NOTES,
         payload: res.data
+      });
+    })
+    .catch(err => console.log(err));
+};
+
+//DELETE NOTE
+export const deleteNote = id => dispatch => {
+  axios
+    .delete(`/api/notes/${id}/`)
+    .then(res => {
+      dispatch({
+        type: DELETE_NOTE,
+        payload: is
       });
     })
     .catch(err => console.log(err));
