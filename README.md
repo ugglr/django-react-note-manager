@@ -1,7 +1,8 @@
 # django-react-note-manager
 
 <p>In this project I am building a REST API using python: Django and Django Rest API framework.<br>
-It is going to be a full CRUD application where the front-end is handled with React. 
+It is going to be a full CRUD application where the front-end is built with React and served using webpack.<br>
+Frontend implements bootstrap, for style and responsiveness. 
 </p>
 
 <h4>Getting the app running locally</h4>
